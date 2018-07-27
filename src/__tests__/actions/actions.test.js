@@ -1,11 +1,11 @@
-import * as actions from './actions'
+import * as actions from '../../actions/actions'
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import data from '../sample_data/propertyData.json'
+import data from '../../sample_data/propertyData.json'
 import {  
 	FETCH_PROP_SUCCESS,
 	SEARCH,
-} from './ActionTypes'
+} from '../../actions/ActionTypes'
 
 const mockStore = configureStore([thunk]);
 const store = mockStore();

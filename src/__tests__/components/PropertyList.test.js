@@ -1,5 +1,5 @@
 import React from 'react';
-import PropertyList from './PropertyList';
+import PropertyList from '../../components/PropertyList';
 import { shallow } from 'enzyme';
 
 //set up wrappers for different tests

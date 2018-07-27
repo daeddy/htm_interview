@@ -2,8 +2,8 @@ import {
 	FETCH_PROP_REQUEST, 
 	FETCH_PROP_FAILURE, 
 	FETCH_PROP_SUCCESS
-} from '../actions/ActionTypes'
-import properties from './propertiesReducer'
+} from '../../actions/ActionTypes'
+import properties from '../../reducers/propertiesReducer'
 
 // Same as reducer
 const INITIAL_STATE = {

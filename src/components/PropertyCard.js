@@ -15,8 +15,8 @@ const PropertyCard = ({ property }) => (
 		</div>
 		<div class="collapse" id={property.id} style={{ padding: '5px', fontSize: '12px' }}>
 			<div class="font-weight-bold" style={{ letterSpacing: '2px', padding: '2px' }}>
-				<i className="fa fa-bed fa-lg"/> {property.gradeSort}
-				<i style={{ marginLeft:'10px'}} className="fa fa-bath fa-lg"/> {property.bathrooms}
+				<i class="fa fa-bed fa-lg"/> {property.gradeSort}
+				<i style={{ marginLeft:'10px'}} class="fa fa-bath fa-lg"/> {property.bathrooms}
 			</div>
 			<p>
 				<span class="font-weight-bold">Description: </span>

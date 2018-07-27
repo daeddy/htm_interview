@@ -1,5 +1,5 @@
 import React from 'react';
-import { getVisibleProperties } from './PropertyContainer';
+import { getVisibleProperties } from '../../containers/PropertyContainer';
 
 const mockProperties = [{
 	name: 'test',

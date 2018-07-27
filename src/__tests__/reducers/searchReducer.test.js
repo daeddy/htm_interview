@@ -1,5 +1,5 @@
-import { SEARCH, SEARCH_CLEAR } from '../actions/ActionTypes'
-import query from './searchReducer'
+import { SEARCH, SEARCH_CLEAR } from '../../actions/ActionTypes';
+import query from '../../reducers/searchReducer';
 
 // Same as reducer
 const INITIAL_STATE = {

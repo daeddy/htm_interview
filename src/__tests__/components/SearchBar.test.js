@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchBar from './SearchBar';
+import SearchBar from '../../components/SearchBar';
 import { shallow } from 'enzyme';
 
 //set up wrappers for different tests
