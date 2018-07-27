@@ -7,7 +7,7 @@ const INITIAL_STATE = {
 const query = (state = INITIAL_STATE, action) => {
 	switch (action.type) {
 		case SEARCH:
-			return {...state, text: action.query}
+			return {...state, text: action.text}
 		case SEARCH_CLEAR:
 			return {...state, text: ''}
 		default:

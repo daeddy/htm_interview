@@ -1,11 +1,12 @@
 import React from 'react';
 import PropertyContainer from './PropertyContainer';
-import SearchBar from './SearchBar';
-
-//Main page with search and property display
+import SearchContainer from './SearchContainer';
+import PlaceholderHeader from '../components/PlaceholderHeader'
+//Main page with search bar and property container
 const App = () => (
-	<div>      
-		<SearchBar/>
+	<div>  
+		<PlaceholderHeader/>
+		<SearchContainer/>
 		<PropertyContainer/>
 	</div> 
 )
