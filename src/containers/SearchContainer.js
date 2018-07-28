@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { search } from '../actions/actions';
+import { search } from '../actions';
 import SearchBar from '../components/SearchBar';
 
 

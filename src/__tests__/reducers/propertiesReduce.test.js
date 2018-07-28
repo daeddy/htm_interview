@@ -9,7 +9,7 @@ import properties from '../../reducers/propertiesReducer'
 const INITIAL_STATE = {
 	items: [],
 	loading: false,
-	error: undefined
+	error: false
 };
 
 // Test propertiesReducer
@@ -28,7 +28,7 @@ describe('propertiesReducer reducer', () => {
 	it('handles FETCH_PROP_SUCCESS', () => {
 		const testAction = { 
 			type: FETCH_PROP_SUCCESS,
-			properties: [{ name: 'test' }]
+			items: [{ name: 'test' }]
 		}
 		expect( properties( [], testAction ) )
 			.toEqual({ loading: false, items: [{ name: 'test' }] })
@@ -37,10 +37,10 @@ describe('propertiesReducer reducer', () => {
 	it('handles FETCH_PROP_FAILURE', () => {
 		const testAction = { 
 			type: FETCH_PROP_FAILURE,
-			error: 'error'
+			error: true
 		}
 		expect( properties( [], testAction ) )
-			.toEqual({ loading: false, error: 'error' })
+			.toEqual({ loading: false, error: true })
 	});
 });
 

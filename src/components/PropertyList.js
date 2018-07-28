@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropertyCard from './PropertyCard';
 import PropTypes from 'prop-types';
+import { SyncLoader } from 'react-spinners';
 
 //Inline styling for grid view
 const gridContainer = {
@@ -11,7 +12,7 @@ const gridContainer = {
 }
 // error view
 const errorView = {
-	padding: '30px',
+	padding: '50px',
 	textAlign: 'center',
 }
 
@@ -23,7 +24,26 @@ class PropertyList extends Component {
 	}
 	
 	render(){
-		var items = this.props.properties; //array of property obj
+		// Error fetching
+		if (this.props.error) {
+            return ( 
+				<div style={errorView}>
+					<h3>Error loading data</h3>
+				</div>
+			);
+        }
+		// Loading data
+        if (this.props.loading) {
+            return ( 
+				<div style={errorView}>
+					<SyncLoader
+					  color={'#01579b'} 
+					/>
+				</div>
+			);
+        }
+		
+		var items = this.props.items; //array of property obj
 		// If there are properties
 		if(items.length > 0)
 			return(
@@ -44,7 +64,9 @@ class PropertyList extends Component {
 
 // Typechecking
 PropertyList.propTypes = {
-	properties: PropTypes.array.isRequired,
+	items: PropTypes.array.isRequired,
+	loading: PropTypes.bool.isRequired,
+	error: PropTypes.bool.isRequired,
 	fetchProperties: PropTypes.func.isRequired
 }
 

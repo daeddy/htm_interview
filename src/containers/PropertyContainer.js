@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import PropertyList from '../components/PropertyList';
-import { fetchProperties } from '../actions/actions';
+import { fetchProperties } from '../actions';
 
 // Filter properties by name or description, export for testing
 export const getVisibleProperties = ( properties, query ) => {
@@ -14,7 +14,9 @@ export const getVisibleProperties = ( properties, query ) => {
 
 // Get properties from redux store by query, default: ''
 const mapStateToProps = state => ({
-	properties: getVisibleProperties( state.properties.items, state.query )
+	items: getVisibleProperties( state.properties.items, state.query ),
+	loading: state.properties.loading,
+	error: state.properties.error
 });
 
 // Provide callbacks to container component.

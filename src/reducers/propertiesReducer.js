@@ -7,7 +7,7 @@ import {
 const INITIAL_STATE = {
 	items: [],
 	loading: false,
-	error: undefined
+	error: false
 };
 
 const properties = (state = INITIAL_STATE, action) => {
@@ -15,9 +15,9 @@ const properties = (state = INITIAL_STATE, action) => {
 		case FETCH_PROP_REQUEST:
 			return {...state, loading: true}
 		case FETCH_PROP_SUCCESS:
-			return {...state, loading: false, items: action.properties}
+			return {...state, loading: false, items: action.items}
 		case FETCH_PROP_FAILURE:
-			return {...state, loading: false, error: action.error}
+			return {...state, loading: false, error: true}
 		default:
 			return state
 	}
