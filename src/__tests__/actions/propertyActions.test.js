@@ -1,7 +1,6 @@
 import { fetchProperties } from '../../actions'
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import data from '../../sample_data/propertyData.json'
 import { 
 	FETCH_PROP_REQUEST, 
 	FETCH_PROP_FAILURE, 

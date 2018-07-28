@@ -1,7 +1,6 @@
 import { search } from '../../actions'
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import data from '../../sample_data/propertyData.json'
 import { SEARCH } from '../../actions/ActionTypes'
 
 const mockStore = configureStore([thunk]);
