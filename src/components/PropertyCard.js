@@ -1,5 +1,4 @@
 import React from 'react';
-import 'font-awesome/css/font-awesome.min.css';
 
 // Property card for displaying a property
 // Displays: name, description, roomcount and bathcount
